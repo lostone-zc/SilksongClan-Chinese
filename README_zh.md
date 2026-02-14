@@ -1,6 +1,6 @@
 # 丝之歌氏族模组
 
-支持的语言: [English](https://github.com/crazyjackel/SilksongClan/blob/main/README.md) | 简体中文
+支持的语言: [English](https://github.com/crazyjackel/SilksongClan/blob/master/README.md) | 简体中文
 
 本模组为《怪物火车 2》增添了一个新氏族：丝之歌。
 
