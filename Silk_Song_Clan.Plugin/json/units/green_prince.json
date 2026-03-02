@@ -43,11 +43,15 @@
       "character_art": "@GreenPrinceCharacterArt",
       "size": 3,
       "health": 40,
-      "attack_damage": 60,
+      "attack_damage": 50,
       "subtypes": ["@Bug", "SubtypesData_BannerUnit"],
       "starting_status_effects": [
         {
           "status": "@Warrior",
+          "count": 1
+        },
+        {
+          "status": "@PinMastery",
           "count": 1
         }
       ],

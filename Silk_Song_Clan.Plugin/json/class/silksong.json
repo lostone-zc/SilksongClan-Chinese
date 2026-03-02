@@ -55,7 +55,8 @@
         }
       ],
       "class_select_character_displays": [
-        "@HornetClassDisplay"
+        "@HornetClassDisplay",
+        "@LaceClassDisplay"
       ],
       "champions": [
         {
@@ -91,6 +92,26 @@
           "icon": "@HornetChampionIcon",
           "portrait": "@HornetChampionIcon",
           "locked_icon": "@HornetChampionIcon"
+        },
+        {
+          "id": "LaceChampion",
+          "card_data": "@SpawnLace",
+          "starter_card": "@NailStrike",
+          "upgrade_tree": [
+            [
+              "@LaceSilken1",
+              "@LaceSilken2",
+              "@LaceSilken3"
+            ],
+            [
+              "@LaceLost1",
+              "@LaceLost2",
+              "@LaceLost3"
+            ]
+          ],
+          "icon": "@LaceChampionIcon",
+          "portrait": "@LaceChampionIcon",
+          "locked_icon": "@LaceChampionIcon"
         }
       ]
     }
@@ -116,9 +137,34 @@
           }
         }
       }
+    },
+    {
+      "id": "LaceClassDisplay",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@LaceCharacterArt",
+          "transform": {
+            "position": {
+              "x": 2,
+              "y": -0.2,
+              "z": 0
+            },
+            "scale": {
+              "x": 3.6,
+              "y": 3.6,
+              "z": 4
+            }
+          }
+        }
+      }
     }
   ],
   "sprites": [
+    {
+      "id": "LaceChampionIcon",
+      "path": "textures/IconLace.png"
+    },
     {
       "id": "SilksongCardDraftIcon",
       "path": "textures/SilksongCardDraftIcon.png"

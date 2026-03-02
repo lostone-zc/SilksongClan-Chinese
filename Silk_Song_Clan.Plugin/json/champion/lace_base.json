@@ -1,0 +1,161 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "cards": [
+    {
+      "id": "SpawnLace",
+      "names": {
+        "english": "Lace",
+        "chinese": "蕾丝"
+      },
+      "card_art": "@Lace",
+      "cost": 0,
+      "card_type": "monster",
+      "rarity": "champion",
+      "class": "@Silksong",
+      "unlock_level": 0,
+      "targets_room": true,
+      "targetless": false,
+      "effects": [
+        "@SpawnLace"
+      ],
+      "lore_tooltips": [
+        {
+          "english": "Yours was a painful, broken trek. One needs grace to stand before the divine."
+        }
+      ]
+    },
+    {
+      "id": "LaceDiveAbility",
+      "names": {
+        "english": "Dive",
+        "chinese": "俯冲"
+      },
+      "descriptions": {
+        "english": "[descend], then Attack. If on the bottom floor, [ascend] instead.",
+        "chinese": "先[descend]，再攻击。如果在底层，则改为[ascend]。"
+      },
+      "is_an_ability": true,
+      "cooldown": 2,
+      "initial_cooldown": 0,
+      "targetless": true,
+      "effects": [
+        "@LaceDiveBumpEffect",
+        "@LaceDiveAttackEffect"
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": "Lace",
+      "names": {
+        "english": "Lace",
+        "chinese": "蕾丝"
+      },
+      "character_art": "@LaceCharacterArt",
+      "chatter": "@CTR_Lace",
+      "size": 2,
+      "attack_damage": 15,
+      "health": 10,
+      "starting_status_effects": [
+        {
+          "status": "@Warrior",
+          "count": 1
+        },
+        {
+          "status": "@PinMastery",
+          "count": 2
+        }
+      ],
+      "subtypes": [
+        "SubtypesData_Champion_83f21cbe-9d9b-4566-a2c3-ca559ab8ff34"
+      ],
+      "ability": "@LaceDiveAbility"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "Lace",
+      "path": "textures/HornetCardArt.png"
+    },
+    {
+      "id": "LaceCharacterArt",
+      "path": "textures/HornetCharacterArt.png"
+    }
+  ],
+  "game_objects": [
+    {
+      "id": "Lace",
+      "type": "card_art",
+      "extensions": {
+        "card_art": {
+          "sprite": "@Lace"
+        }
+      }
+    },
+    {
+      "id": "LaceCharacterArt",
+      "type": "character_art",
+      "extensions": {
+        "character_art": {
+          "sprite": "@LaceCharacterArt",
+          "transform": {
+            "position": {
+              "x": 0,
+              "y": 0.9,
+              "z": 0
+            },
+            "scale": {
+              "x": 1.5,
+              "y": 1.5,
+              "z": 1
+            }
+          }
+        }
+      }
+    }
+  ],
+  "chatter": [
+    {
+      "id": "CTR_Lace",
+      "gender": "female",
+      "added_expressions": [
+        {
+          "english": "What's this?"
+        }
+      ],
+      "attacking_expressions": [
+        {
+          "english": "Nnphh."
+        }
+      ],
+      "idle_expressions": [
+        {
+          "english": "Hahahaa. Marvelous."
+        }
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "SpawnLace",
+      "name": "CardEffectSpawnMonster",
+      "target_mode": "room",
+      "target_card_type": "spell",
+      "param_character": "@Lace"
+    },
+    {
+      "id": "LaceDiveBumpEffect",
+      "name": "@CardEffectBumpConditionalBottom",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_int": -1
+    },
+    {
+      "id": "LaceDiveAttackEffect",
+      "name": "CardEffectAttackWithUnit",
+      "target_mode": "self",
+      "target_team": "monsters"
+    }
+  ]
+}
+

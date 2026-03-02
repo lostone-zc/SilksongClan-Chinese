@@ -1,4 +1,4 @@
-﻿using BepInEx;
+using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
 using TrainworksReloaded.Base;
@@ -49,6 +49,9 @@ namespace Silk_Song_Clan.Plugin
                         "json/champion/hornet_shaman.json",
                         "json/champion/hornet_wanderer.json",
                         "json/champion/hornet_witch.json",
+                        "json/champion/lace_base.json",
+                        "json/champion/lace_silken.json",
+                        "json/champion/lace_lost.json",
 
                         //Relics
                         "json/relics/architect_key.json",
@@ -152,6 +155,7 @@ namespace Silk_Song_Clan.Plugin
                         "json/status_effects/permanent_imbue.json",
                         "json/status_effects/permanent_protection.json",
                         "json/status_effects/full_silk_attack_buff.json",
+                        "json/status_effects/pin_mastery.json",
 
                         //Tracked Values
                         "json/tracked_values/silk.json",
