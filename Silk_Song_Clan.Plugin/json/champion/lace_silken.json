@@ -1,0 +1,77 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "relics": [
+    {
+      "id": "SilkenThread",
+      "type": "collectable",
+      "names": {
+        "english": "Silken Thread",
+        "chinese": "丝线"
+      },
+      "descriptions": {
+        "english": "Increase the maximum amount of [Silk_Song_Clan.Plugin_Silk] by [effect0.power].",
+        "chinese": "[Silk_Song_Clan.Plugin_Silk] 上限提高 [effect0.power]。"
+      },
+      "icon": "@PollenHeartIcon",
+      "icon_small": "@PollenHeartIcon",
+      "relic_effects": ["@SilkenThreadEffect"],
+      "extensions": [{"collectable": {"class": "@Silksong", "rarity": "common"}}]
+    }
+  ],
+  "relic_effects": [
+    {
+      "id": "SilkenThreadEffect",
+      "name": "@RelicEffectAddMaxSilk",
+      "param_int": 1
+    }
+  ],
+  "character_triggers": [
+    {
+      "id": "LaceSilken1SpawnTrigger",
+      "trigger": "on_spawn",
+      "descriptions": {
+        "english": "Gain a relic that gives +1 max [Silk_Song_Clan.Plugin_Silk].",
+        "chinese": "获得一个使[Silk_Song_Clan.Plugin_Silk]上限 +1 的遗物。"
+      },
+      "effects": ["@LaceSilken1AddRelicEffect"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "LaceSilken1AddRelicEffect",
+      "name": "@CardEffectAddRelic",
+      "target_mode": "self",
+      "param_str": "SilkenThread"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "LaceSilken1",
+      "titles": {"english": "Silken I", "chinese": "丝缚 I"},
+      "bonus_damage": 7,
+      "bonus_hp": 10,
+      "trigger_upgrades": ["@LaceSilken1SpawnTrigger"],
+      "status_effect_upgrades": [{"status": "@PinMastery", "count": 1}],
+      "show_description_on_cards": true
+    },
+    {
+      "id": "LaceSilken2",
+      "titles": {"english": "Silken II", "chinese": "丝缚 II"},
+      "bonus_damage": 8,
+      "bonus_hp": 12,
+      "status_effect_upgrades": [
+        {"status": "endless", "count": 1},
+        {"status": "@PinMastery", "count": 1}
+      ],
+      "show_description_on_cards": true
+    },
+    {
+      "id": "LaceSilken3",
+      "titles": {"english": "Silken III", "chinese": "丝缚 III"},
+      "bonus_damage": 6,
+      "bonus_hp": 10,
+      "status_effect_upgrades": [{"status": "@PinMastery", "count": 2}],
+      "show_description_on_cards": true
+    }
+  ]
+}

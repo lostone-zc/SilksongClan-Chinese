@@ -64,10 +64,16 @@
       "character_art": "@PinmasterPlinneyCharacterArt",
       "size": 2,
       "health": 16,
-      "attack_damage": 16,
+      "attack_damage": 8,
       "subtypes": [
         "@Bug",
         "SubtypesData_BannerUnit"
+      ],
+      "starting_status_effects": [
+        {
+          "status": "@PinMastery",
+          "count": 1
+        }
       ],
       "ability": "@PinmasterAbilityTrigger"
     }

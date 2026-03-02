@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/refs/heads/main/schemas/base.json",
+  "character_triggers": [
+    {
+      "id": "LaceLost1StrikeTrigger",
+      "trigger": "on_post_attacking",
+      "descriptions": {
+        "english": "[strike]: [descend].",
+        "chinese": "[strike]：[descend]。"
+      },
+      "effects": ["@LaceLost1DescendEffect"]
+    },
+    {
+      "id": "LaceLost2SilksongTrigger",
+      "trigger": "@Silksong",
+      "descriptions": {
+        "english": "[Silk_Song_Clan.Plugin_Silksong]: [ascend].",
+        "chinese": "[Silk_Song_Clan.Plugin_Silksong]：[ascend]。"
+      },
+      "effects": ["@LaceLost2AscendEffect"]
+    }
+  ],
+  "effects": [
+    {
+      "id": "LaceLost1DescendEffect",
+      "name": "CardEffectBump",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_int": -1
+    },
+    {
+      "id": "LaceLost2AscendEffect",
+      "name": "CardEffectBump",
+      "target_mode": "self",
+      "target_team": "monsters",
+      "param_int": 1
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "LaceLost1",
+      "titles": {"english": "Lost I", "chinese": "迷失 I"},
+      "bonus_damage": 12,
+      "bonus_hp": 12,
+      "trigger_upgrades": ["@LaceLost1StrikeTrigger"],
+      "show_description_on_cards": true
+    },
+    {
+      "id": "LaceLost2",
+      "titles": {"english": "Lost II", "chinese": "迷失 II"},
+      "bonus_damage": 15,
+      "bonus_hp": 15,
+      "trigger_upgrades": ["@LaceLost2SilksongTrigger"],
+      "show_description_on_cards": true
+    },
+    {
+      "id": "LaceLost3",
+      "titles": {"english": "Lost III", "chinese": "迷失 III"},
+      "bonus_damage": 20,
+      "bonus_hp": 20,
+      "show_description_on_cards": true
+    }
+  ]
+}

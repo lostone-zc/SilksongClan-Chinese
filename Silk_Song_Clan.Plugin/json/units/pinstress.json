@@ -40,15 +40,15 @@
       },
       "character_art": "@PinstressCharacterArt",
       "size": 3,
-      "health": 40,
-      "attack_damage": 25,
+      "health": 30,
+      "attack_damage": 20,
       "subtypes": [
         "@Pinstress",
         "SubtypesData_BannerUnit"
       ],
       "starting_status_effects": [
         {
-          "status": "mageblade",
+          "status": "@PinMastery",
           "count": 2
         }
       ],

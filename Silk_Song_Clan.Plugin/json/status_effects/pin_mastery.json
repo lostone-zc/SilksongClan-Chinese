@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Monster-Train-2-Modding-Group/Trainworks-Reloaded/main/schemas/base.json",
+  "status_effects": [
+    {
+      "id": "PinMastery",
+      "class_name": "@StatusEffectPinMasteryState",
+      "names": {
+        "english": "Pin Mastery",
+        "chinese": "针法精通"
+      },
+      "stackable_names": {
+        "english": "Pin Mastery {0}",
+        "chinese": "针法精通 {0}"
+      },
+      "card_tooltips": {
+        "english": "Gain +[codeint0] [attack] per [Silk_Song_Clan.Plugin_Silk].",
+        "chinese": "每有一点[Silk_Song_Clan.Plugin_Silk]，获得 +[codeint0][attack]。"
+      },
+      "character_tooltips": {
+        "english": "Gain +[codeint0] [attack] per [Silk_Song_Clan.Plugin_Silk].",
+        "chinese": "每有一点[Silk_Song_Clan.Plugin_Silk]，获得 +[codeint0][attack]。"
+      },
+      "notifications": {
+        "english": "Pin Mastery",
+        "chinese": "针法精通"
+      },
+      "replacement_texts": {
+        "english": "<b>Pin Mastery</b>",
+        "chinese": "<b>针法精通</b>"
+      },
+      "display_category": "positive",
+      "is_stackable": true,
+      "is_propagatable": false,
+      "param_int": 1,
+      "icon": "@PinMastery"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "PinMastery",
+      "path": "textures/StatusPinMastery.png"
+    }
+  ],
+  "atlas_icons": [
+    {
+      "id": "PinMastery",
+      "path": "textures/StatusPinMasteryTooltip.png"
+    }
+  ]
+}
